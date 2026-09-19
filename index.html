@@ -12,12 +12,7 @@ body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans
 .hero{background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 8px 25px rgba(0,0,0,.07)}
 h1{margin:0;font-size:clamp(29px,7vw,46px);line-height:1.1} .sub{color:var(--muted);margin-top:8px;line-height:1.65}
 .notice{margin-top:12px;background:#fff5d9;border-radius:14px;padding:10px 12px;font-size:14px;line-height:1.5}
-.speedbox{margin-top:14px;background:#eef7ff;border:1px solid #d7eaff;border-radius:16px;padding:12px}
-.speedbox b{display:block;margin-bottom:8px}
-.speedrow{display:flex;gap:8px;flex-wrap:wrap}
-.speedbtn{background:#fff;border:2px solid #d9e3ef;color:#334155;padding:9px 12px}
-.speedbtn.active{background:#5f5ce6;color:#fff;border-color:#5f5ce6}
-.speedhint{font-size:12px;color:#718096;margin-top:7px}
+
 .daycard{background:#fff;border:1px solid var(--line);border-radius:20px;margin:12px 0;box-shadow:0 5px 18px rgba(0,0,0,.05);overflow:hidden}
 summary{list-style:none;padding:15px;display:flex;align-items:center;gap:9px;cursor:pointer;font-weight:900}
 summary::-webkit-details-marker{display:none} .dayno{background:#252d3a;color:#fff;border-radius:999px;padding:6px 9px;font-size:13px} .ico{font-size:28px} .daytitle{font-size:18px}
@@ -41,6 +36,29 @@ button{font:inherit;border:0;border-radius:12px;padding:10px;cursor:pointer;font
 .quizscore{margin-top:10px;background:#fff;border-radius:12px;padding:10px;text-align:center;font-weight:900}
 .donecheck{display:block;background:#edfff5;border-radius:14px;padding:12px;margin-top:16px;font-weight:850}
 .footer{color:var(--muted);font-size:13px;line-height:1.6;margin-top:18px}
+
+.floating-speed{
+  position:fixed; right:14px; bottom:18px; z-index:9999;
+  display:flex; flex-direction:column; align-items:flex-end; gap:8px;
+}
+.speed-fab{
+  background:#5f5ce6; color:#fff; border-radius:999px; padding:12px 16px;
+  box-shadow:0 10px 24px rgba(59,72,110,.24); border:0; font-weight:900;
+}
+.speed-panel{
+  width:min(86vw,260px); background:#fff; border:1px solid #dbe4f0; border-radius:18px;
+  box-shadow:0 14px 30px rgba(30,41,59,.18); padding:12px; display:none;
+}
+.speed-panel.show{display:block}
+.speed-title{font-weight:900; margin-bottom:8px}
+.speedrow{display:flex; flex-direction:column; gap:8px}
+.speedbtn{
+  background:#fff;border:2px solid #d9e3ef;color:#334155;padding:10px 12px;
+  text-align:left;border-radius:12px;width:100%;
+}
+.speedbtn.active{background:#5f5ce6;color:#fff;border-color:#5f5ce6}
+.speedhint{font-size:12px;color:#718096;margin-top:8px;line-height:1.5}
+
 </style>
 </head>
 <body>
@@ -3003,6 +3021,21 @@ button{font:inherit;border:0;border-radius:12px;padding:10px;cursor:pointer;font
     </details>
   <div class="footer">建議使用 Safari 或 Chrome 開啟。若錄音沒有反應，請到瀏覽器網站設定確認麥克風權限已允許。完成紀錄會儲存在目前瀏覽器中。</div>
 </div>
+
+<div class="floating-speed">
+  <div id="speedPanel" class="speed-panel">
+    <div class="speed-title">🔊 英文發音速度</div>
+    <div class="speedrow">
+      <button class="speedbtn" data-rate="0.5" onclick="setEnglishRate(0.5)">🐢 0.5 慢速</button>
+      <button class="speedbtn" data-rate="0.65" onclick="setEnglishRate(0.65)">🌱 0.65 學習</button>
+      <button class="speedbtn" data-rate="0.8" onclick="setEnglishRate(0.8)">🙂 0.8 練習</button>
+      <button class="speedbtn" data-rate="1" onclick="setEnglishRate(1)">🚀 1.0 正常</button>
+    </div>
+    <div class="speedhint">可隨時切換，不用滑回最上面。預設 0.65，比較適合跟讀。</div>
+  </div>
+  <button class="speed-fab" onclick="toggleSpeedPanel()">🔊 語速</button>
+</div>
+
 <script>
 let englishRate = Number(localStorage.getItem("wayne_english_rate") || "0.65");
 
@@ -3018,6 +3051,17 @@ function setEnglishRate(rate){
   updateSpeedButtons();
   speechSynthesis.cancel();
 }
+
+function toggleSpeedPanel(){
+  const panel = document.getElementById("speedPanel");
+  if(panel){ panel.classList.toggle("show"); }
+}
+document.addEventListener("click", function(e){
+  const box = document.querySelector(".floating-speed");
+  const panel = document.getElementById("speedPanel");
+  if(!box || !panel) return;
+  if(!box.contains(e.target)){ panel.classList.remove("show"); }
+});
 
 function speakText(t,lang){
   if(!window.speechSynthesis){alert("目前瀏覽器不支援語音播放。");return;}
