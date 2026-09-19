@@ -1,0 +1,3045 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Wayne's English Adventure | 30 Days</title>
+<style>
+:root{--ink:#1f3545;--muted:#718096;--line:#e7e9ee;--accent:#5f5ce6;--green:#20a768}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC",Arial,sans-serif;background:linear-gradient(#fff9ef,#f6fbff);color:var(--ink)}
+.wrap{max-width:800px;margin:auto;padding:18px 14px 70px}
+.hero{background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 8px 25px rgba(0,0,0,.07)}
+h1{margin:0;font-size:clamp(29px,7vw,46px);line-height:1.1} .sub{color:var(--muted);margin-top:8px;line-height:1.65}
+.notice{margin-top:12px;background:#fff5d9;border-radius:14px;padding:10px 12px;font-size:14px;line-height:1.5}
+.daycard{background:#fff;border:1px solid var(--line);border-radius:20px;margin:12px 0;box-shadow:0 5px 18px rgba(0,0,0,.05);overflow:hidden}
+summary{list-style:none;padding:15px;display:flex;align-items:center;gap:9px;cursor:pointer;font-weight:900}
+summary::-webkit-details-marker{display:none} .dayno{background:#252d3a;color:#fff;border-radius:999px;padding:6px 9px;font-size:13px} .ico{font-size:28px} .daytitle{font-size:18px}
+.inside{padding:0 14px 18px}
+.sectiontitle{font-weight:950;margin:18px 0 8px;font-size:17px}
+.wordrow{display:grid;grid-template-columns:45px 1fr 50px 45px;align-items:center;gap:8px;padding:10px 8px;border-top:1px solid #f0f1f4}
+.emo{font-size:28px;text-align:center} .wtext b{font-size:21px;display:block} .wtext span{color:var(--muted);font-size:14px}
+button{font:inherit;border:0;border-radius:12px;padding:10px;cursor:pointer;font-weight:800} .speak{background:#fff0dd} .zhbtn{background:#eef4ff}
+.pattern{background:#f8f8ff;border-radius:16px;padding:14px} .pattern b{font-size:23px} .zhline{color:var(--muted);margin-top:4px}
+.patbuttons{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px} .patbuttons button{background:#ebeaff;color:#3732a6}
+.reading{background:#fffaf0;border:1px solid #f4e4c8;border-radius:16px;padding:14px}
+.enpass{font-size:20px;line-height:1.8;font-weight:750} .zhpass{color:var(--muted);line-height:1.75;margin-top:10px}
+.readtip{font-size:13px;color:#8a6d3b;margin-top:10px}
+.recordbox{background:#f7fafc;border-radius:16px;padding:12px;line-height:1.5} .recbtn{background:#e95555;color:#fff;margin-top:10px} .playback{width:100%;margin-top:10px;display:none} .recstatus{font-size:12px;color:var(--muted);margin-top:7px}
+.quiz{background:#f7fbff;border-radius:16px;padding:12px}
+.qitem{padding:12px 0;border-bottom:1px solid #e8eef5} .qitem:last-of-type{border-bottom:0}
+.qtitle{font-weight:850;margin-bottom:8px} .qopts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.qopt{background:#fff;border:2px solid #e4e8ef;color:#263244}
+.qopt.correct{background:#edfff5;border-color:#42b883} .qopt.wrong{background:#fff0f0;border-color:#e86a6a}
+.qfeedback{min-height:20px;margin-top:6px;font-size:13px;font-weight:800}
+.quizscore{margin-top:10px;background:#fff;border-radius:12px;padding:10px;text-align:center;font-weight:900}
+.donecheck{display:block;background:#edfff5;border-radius:14px;padding:12px;margin-top:16px;font-weight:850}
+.footer{color:var(--muted);font-size:13px;line-height:1.6;margin-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>🏝️ Wayne's English Adventure</h1>
+    <div class="sub">30 天互動版・每天約 15 分鐘<br>5 個單字 → 句型 → 小短文 → 跟讀錄音 → 單字小測驗</div>
+    <div class="notice"><b>互動版已啟用。</b> 使用 HTTPS 網站開啟時，可使用發音、麥克風錄音、回放與完成紀錄。第一次錄音時請按「允許」麥克風權限。</div>
+  </div>
+  
+    <details class="daycard" open data-day="1">
+      <summary><span class="dayno">Day 1</span><span class="ico">🍎</span><span class="daytitle">Food 1 食物</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🍎</div>
+          <div class="wtext"><b>apple</b><span>蘋果</span></div>
+          <button class="speak" onclick='speakText("apple","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("蘋果","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🍌</div>
+          <div class="wtext"><b>banana</b><span>香蕉</span></div>
+          <button class="speak" onclick='speakText("banana","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("香蕉","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🍞</div>
+          <div class="wtext"><b>bread</b><span>麵包</span></div>
+          <button class="speak" onclick='speakText("bread","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("麵包","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🥛</div>
+          <div class="wtext"><b>milk</b><span>牛奶</span></div>
+          <button class="speak" onclick='speakText("milk","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("牛奶","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">💧</div>
+          <div class="wtext"><b>water</b><span>水</span></div>
+          <button class="speak" onclick='speakText("water","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("水","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I like ___.</b><div class="zhline">我喜歡___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I like apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我喜歡___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I like apples. I like bananas, too. I eat bread and drink milk for breakfast. I drink water every day.</div>
+          <div class="zhpass">我喜歡蘋果。我也喜歡香蕉。早餐我吃麵包、喝牛奶。我每天都喝水。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I like apples. I like bananas, too. I eat bread and drink milk for breakfast. I drink water every day.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我喜歡蘋果。我也喜歡香蕉。早餐我吃麵包、喝牛奶。我每天都喝水。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="1">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🍎 「蘋果」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="apple" data-value="banana">banana</button><button class="qopt" data-answer="apple" data-value="apple">apple</button><button class="qopt" data-answer="apple" data-value="milk">milk</button><button class="qopt" data-answer="apple" data-value="water">water</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🍌 「香蕉」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="banana" data-value="apple">apple</button><button class="qopt" data-answer="banana" data-value="water">water</button><button class="qopt" data-answer="banana" data-value="milk">milk</button><button class="qopt" data-answer="banana" data-value="banana">banana</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🍞 「麵包」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="bread" data-value="apple">apple</button><button class="qopt" data-answer="bread" data-value="water">water</button><button class="qopt" data-answer="bread" data-value="bread">bread</button><button class="qopt" data-answer="bread" data-value="milk">milk</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🥛 「牛奶」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="milk" data-value="milk">milk</button><button class="qopt" data-answer="milk" data-value="banana">banana</button><button class="qopt" data-answer="milk" data-value="apple">apple</button><button class="qopt" data-answer="milk" data-value="bread">bread</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 💧 「水」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="water" data-value="banana">banana</button><button class="qopt" data-answer="water" data-value="bread">bread</button><button class="qopt" data-answer="water" data-value="water">water</button><button class="qopt" data-answer="water" data-value="milk">milk</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(1, this.checked)"> ⭐ Day 1 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="2">
+      <summary><span class="dayno">Day 2</span><span class="ico">🍚</span><span class="daytitle">Food 2 食物</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🍚</div>
+          <div class="wtext"><b>rice</b><span>飯</span></div>
+          <button class="speak" onclick='speakText("rice","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("飯","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🥚</div>
+          <div class="wtext"><b>egg</b><span>蛋</span></div>
+          <button class="speak" onclick='speakText("egg","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("蛋","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🍰</div>
+          <div class="wtext"><b>cake</b><span>蛋糕</span></div>
+          <button class="speak" onclick='speakText("cake","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("蛋糕","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🧃</div>
+          <div class="wtext"><b>juice</b><span>果汁</span></div>
+          <button class="speak" onclick='speakText("juice","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("果汁","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🍗</div>
+          <div class="wtext"><b>chicken</b><span>雞肉</span></div>
+          <button class="speak" onclick='speakText("chicken","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("雞肉","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I want ___.</b><div class="zhline">我想要___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I want apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我想要___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I am hungry. I want rice and chicken. I want an egg, too. After dinner, I want some juice and a little cake.</div>
+          <div class="zhpass">我肚子餓了。我想吃飯和雞肉。我也想吃一顆蛋。晚餐後，我想喝一些果汁，再吃一點蛋糕。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I am hungry. I want rice and chicken. I want an egg, too. After dinner, I want some juice and a little cake.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我肚子餓了。我想吃飯和雞肉。我也想吃一顆蛋。晚餐後，我想喝一些果汁，再吃一點蛋糕。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="2">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🍚 「飯」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="rice" data-value="juice">juice</button><button class="qopt" data-answer="rice" data-value="cake">cake</button><button class="qopt" data-answer="rice" data-value="rice">rice</button><button class="qopt" data-answer="rice" data-value="chicken">chicken</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🥚 「蛋」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="egg" data-value="cake">cake</button><button class="qopt" data-answer="egg" data-value="juice">juice</button><button class="qopt" data-answer="egg" data-value="chicken">chicken</button><button class="qopt" data-answer="egg" data-value="egg">egg</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🍰 「蛋糕」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="cake" data-value="juice">juice</button><button class="qopt" data-answer="cake" data-value="rice">rice</button><button class="qopt" data-answer="cake" data-value="egg">egg</button><button class="qopt" data-answer="cake" data-value="cake">cake</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🧃 「果汁」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="juice" data-value="cake">cake</button><button class="qopt" data-answer="juice" data-value="chicken">chicken</button><button class="qopt" data-answer="juice" data-value="egg">egg</button><button class="qopt" data-answer="juice" data-value="juice">juice</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🍗 「雞肉」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="chicken" data-value="egg">egg</button><button class="qopt" data-answer="chicken" data-value="rice">rice</button><button class="qopt" data-answer="chicken" data-value="cake">cake</button><button class="qopt" data-answer="chicken" data-value="chicken">chicken</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(2, this.checked)"> ⭐ Day 2 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="3">
+      <summary><span class="dayno">Day 3</span><span class="ico">😋</span><span class="daytitle">喜歡／不喜歡</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🍬</div>
+          <div class="wtext"><b>sweet</b><span>甜的</span></div>
+          <button class="speak" onclick='speakText("sweet","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("甜的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🧂</div>
+          <div class="wtext"><b>salty</b><span>鹹的</span></div>
+          <button class="speak" onclick='speakText("salty","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("鹹的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🔥</div>
+          <div class="wtext"><b>hot</b><span>熱的</span></div>
+          <button class="speak" onclick='speakText("hot","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("熱的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🧊</div>
+          <div class="wtext"><b>cold</b><span>冰的</span></div>
+          <button class="speak" onclick='speakText("cold","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("冰的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">😋</div>
+          <div class="wtext"><b>yummy</b><span>好吃的</span></div>
+          <button class="speak" onclick='speakText("yummy","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("好吃的","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I don&#x27;t like ___.</b><div class="zhline">我不喜歡___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I don't like apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我不喜歡___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">This cake is sweet and yummy. The soup is hot. I don&#x27;t like very salty food. I like cold juice on a hot day.</div>
+          <div class="zhpass">這個蛋糕甜甜的，而且很好吃。湯是熱的。我不喜歡太鹹的食物。天氣熱時，我喜歡喝冰果汁。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("This cake is sweet and yummy. The soup is hot. I don't like very salty food. I like cold juice on a hot day.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("這個蛋糕甜甜的，而且很好吃。湯是熱的。我不喜歡太鹹的食物。天氣熱時，我喜歡喝冰果汁。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="3">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🍬 「甜的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="sweet" data-value="salty">salty</button><button class="qopt" data-answer="sweet" data-value="sweet">sweet</button><button class="qopt" data-answer="sweet" data-value="hot">hot</button><button class="qopt" data-answer="sweet" data-value="yummy">yummy</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🧂 「鹹的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="salty" data-value="salty">salty</button><button class="qopt" data-answer="salty" data-value="sweet">sweet</button><button class="qopt" data-answer="salty" data-value="cold">cold</button><button class="qopt" data-answer="salty" data-value="hot">hot</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🔥 「熱的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="hot" data-value="hot">hot</button><button class="qopt" data-answer="hot" data-value="salty">salty</button><button class="qopt" data-answer="hot" data-value="sweet">sweet</button><button class="qopt" data-answer="hot" data-value="cold">cold</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🧊 「冰的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="cold" data-value="salty">salty</button><button class="qopt" data-answer="cold" data-value="cold">cold</button><button class="qopt" data-answer="cold" data-value="hot">hot</button><button class="qopt" data-answer="cold" data-value="yummy">yummy</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 😋 「好吃的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="yummy" data-value="cold">cold</button><button class="qopt" data-answer="yummy" data-value="yummy">yummy</button><button class="qopt" data-answer="yummy" data-value="hot">hot</button><button class="qopt" data-answer="yummy" data-value="sweet">sweet</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(3, this.checked)"> ⭐ Day 3 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="4">
+      <summary><span class="dayno">Day 4</span><span class="ico">❓</span><span class="daytitle">問喜好</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">✅</div>
+          <div class="wtext"><b>yes</b><span>是</span></div>
+          <button class="speak" onclick='speakText("yes","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("是","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">❌</div>
+          <div class="wtext"><b>no</b><span>不是</span></div>
+          <button class="speak" onclick='speakText("no","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("不是","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">❤️</div>
+          <div class="wtext"><b>like</b><span>喜歡</span></div>
+          <button class="speak" onclick='speakText("like","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("喜歡","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🙋</div>
+          <div class="wtext"><b>want</b><span>想要</span></div>
+          <button class="speak" onclick='speakText("want","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("想要","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🍽️</div>
+          <div class="wtext"><b>food</b><span>食物</span></div>
+          <button class="speak" onclick='speakText("food","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("食物","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>Do you like ___?</b><div class="zhline">你喜歡___嗎？</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("Do you like apple?","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("你喜歡___嗎？","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">Do you like apples? Yes, I do. Do you like milk? No, I don&#x27;t. I like fruit, and I want some food now.</div>
+          <div class="zhpass">你喜歡蘋果嗎？是的，我喜歡。你喜歡牛奶嗎？不，我不喜歡。我喜歡水果，而且我現在想吃點東西。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("Do you like apples? Yes, I do. Do you like milk? No, I don't. I like fruit, and I want some food now.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("你喜歡蘋果嗎？是的，我喜歡。你喜歡牛奶嗎？不，我不喜歡。我喜歡水果，而且我現在想吃點東西。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="4">
+          
+        <div class="qitem">
+          <div class="qtitle">1. ✅ 「是」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="yes" data-value="yes">yes</button><button class="qopt" data-answer="yes" data-value="like">like</button><button class="qopt" data-answer="yes" data-value="no">no</button><button class="qopt" data-answer="yes" data-value="food">food</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. ❌ 「不是」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="no" data-value="want">want</button><button class="qopt" data-answer="no" data-value="no">no</button><button class="qopt" data-answer="no" data-value="like">like</button><button class="qopt" data-answer="no" data-value="yes">yes</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. ❤️ 「喜歡」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="like" data-value="no">no</button><button class="qopt" data-answer="like" data-value="like">like</button><button class="qopt" data-answer="like" data-value="want">want</button><button class="qopt" data-answer="like" data-value="yes">yes</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🙋 「想要」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="want" data-value="like">like</button><button class="qopt" data-answer="want" data-value="food">food</button><button class="qopt" data-answer="want" data-value="want">want</button><button class="qopt" data-answer="want" data-value="yes">yes</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🍽️ 「食物」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="food" data-value="food">food</button><button class="qopt" data-answer="food" data-value="like">like</button><button class="qopt" data-answer="food" data-value="want">want</button><button class="qopt" data-answer="food" data-value="no">no</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(4, this.checked)"> ⭐ Day 4 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="5">
+      <summary><span class="dayno">Day 5</span><span class="ico">⭐</span><span class="daytitle">Food Boss 食物大挑戰</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🍎</div>
+          <div class="wtext"><b>apple</b><span>蘋果</span></div>
+          <button class="speak" onclick='speakText("apple","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("蘋果","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🥛</div>
+          <div class="wtext"><b>milk</b><span>牛奶</span></div>
+          <button class="speak" onclick='speakText("milk","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("牛奶","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🍚</div>
+          <div class="wtext"><b>rice</b><span>飯</span></div>
+          <button class="speak" onclick='speakText("rice","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("飯","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🍰</div>
+          <div class="wtext"><b>cake</b><span>蛋糕</span></div>
+          <button class="speak" onclick='speakText("cake","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("蛋糕","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🧃</div>
+          <div class="wtext"><b>juice</b><span>果汁</span></div>
+          <button class="speak" onclick='speakText("juice","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("果汁","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I like ___.</b><div class="zhline">我喜歡___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I like apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我喜歡___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I like apples and rice. I drink milk in the morning. I want juice after school. I like cake, but I only eat a little.</div>
+          <div class="zhpass">我喜歡蘋果和飯。我早上喝牛奶。放學後我想喝果汁。我喜歡蛋糕，但我只吃一點點。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I like apples and rice. I drink milk in the morning. I want juice after school. I like cake, but I only eat a little.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我喜歡蘋果和飯。我早上喝牛奶。放學後我想喝果汁。我喜歡蛋糕，但我只吃一點點。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="5">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🍎 「蘋果」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="apple" data-value="apple">apple</button><button class="qopt" data-answer="apple" data-value="rice">rice</button><button class="qopt" data-answer="apple" data-value="cake">cake</button><button class="qopt" data-answer="apple" data-value="milk">milk</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🥛 「牛奶」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="milk" data-value="milk">milk</button><button class="qopt" data-answer="milk" data-value="apple">apple</button><button class="qopt" data-answer="milk" data-value="juice">juice</button><button class="qopt" data-answer="milk" data-value="rice">rice</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🍚 「飯」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="rice" data-value="juice">juice</button><button class="qopt" data-answer="rice" data-value="apple">apple</button><button class="qopt" data-answer="rice" data-value="rice">rice</button><button class="qopt" data-answer="rice" data-value="milk">milk</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🍰 「蛋糕」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="cake" data-value="cake">cake</button><button class="qopt" data-answer="cake" data-value="apple">apple</button><button class="qopt" data-answer="cake" data-value="juice">juice</button><button class="qopt" data-answer="cake" data-value="rice">rice</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🧃 「果汁」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="juice" data-value="juice">juice</button><button class="qopt" data-answer="juice" data-value="rice">rice</button><button class="qopt" data-answer="juice" data-value="apple">apple</button><button class="qopt" data-answer="juice" data-value="milk">milk</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(5, this.checked)"> ⭐ Day 5 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="6">
+      <summary><span class="dayno">Day 6</span><span class="ico">🐶</span><span class="daytitle">Animals 1 動物</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🐶</div>
+          <div class="wtext"><b>dog</b><span>狗</span></div>
+          <button class="speak" onclick='speakText("dog","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("狗","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐱</div>
+          <div class="wtext"><b>cat</b><span>貓</span></div>
+          <button class="speak" onclick='speakText("cat","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("貓","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐦</div>
+          <div class="wtext"><b>bird</b><span>鳥</span></div>
+          <button class="speak" onclick='speakText("bird","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("鳥","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐟</div>
+          <div class="wtext"><b>fish</b><span>魚</span></div>
+          <button class="speak" onclick='speakText("fish","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("魚","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐰</div>
+          <div class="wtext"><b>rabbit</b><span>兔子</span></div>
+          <button class="speak" onclick='speakText("rabbit","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("兔子","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>This is a ___.</b><div class="zhline">這是一隻___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("This is a apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("這是一隻___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">This is a dog. It is my friend. This is a cat, and that is a rabbit. I can see a bird and a fish, too.</div>
+          <div class="zhpass">這是一隻狗。牠是我的朋友。這是一隻貓，那是一隻兔子。我也可以看到一隻鳥和一條魚。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("This is a dog. It is my friend. This is a cat, and that is a rabbit. I can see a bird and a fish, too.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("這是一隻狗。牠是我的朋友。這是一隻貓，那是一隻兔子。我也可以看到一隻鳥和一條魚。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="6">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🐶 「狗」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="dog" data-value="rabbit">rabbit</button><button class="qopt" data-answer="dog" data-value="dog">dog</button><button class="qopt" data-answer="dog" data-value="bird">bird</button><button class="qopt" data-answer="dog" data-value="cat">cat</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🐱 「貓」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="cat" data-value="rabbit">rabbit</button><button class="qopt" data-answer="cat" data-value="cat">cat</button><button class="qopt" data-answer="cat" data-value="fish">fish</button><button class="qopt" data-answer="cat" data-value="dog">dog</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🐦 「鳥」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="bird" data-value="dog">dog</button><button class="qopt" data-answer="bird" data-value="cat">cat</button><button class="qopt" data-answer="bird" data-value="bird">bird</button><button class="qopt" data-answer="bird" data-value="fish">fish</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🐟 「魚」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="fish" data-value="fish">fish</button><button class="qopt" data-answer="fish" data-value="bird">bird</button><button class="qopt" data-answer="fish" data-value="dog">dog</button><button class="qopt" data-answer="fish" data-value="rabbit">rabbit</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🐰 「兔子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="rabbit" data-value="rabbit">rabbit</button><button class="qopt" data-answer="rabbit" data-value="fish">fish</button><button class="qopt" data-answer="rabbit" data-value="bird">bird</button><button class="qopt" data-answer="rabbit" data-value="cat">cat</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(6, this.checked)"> ⭐ Day 6 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="7">
+      <summary><span class="dayno">Day 7</span><span class="ico">🦁</span><span class="daytitle">Animals 2 動物</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🦁</div>
+          <div class="wtext"><b>lion</b><span>獅子</span></div>
+          <button class="speak" onclick='speakText("lion","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("獅子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐵</div>
+          <div class="wtext"><b>monkey</b><span>猴子</span></div>
+          <button class="speak" onclick='speakText("monkey","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("猴子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🦆</div>
+          <div class="wtext"><b>duck</b><span>鴨子</span></div>
+          <button class="speak" onclick='speakText("duck","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("鴨子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐻</div>
+          <div class="wtext"><b>bear</b><span>熊</span></div>
+          <button class="speak" onclick='speakText("bear","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("熊","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐘</div>
+          <div class="wtext"><b>elephant</b><span>大象</span></div>
+          <button class="speak" onclick='speakText("elephant","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("大象","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I see a ___.</b><div class="zhline">我看到一隻___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I see a apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我看到一隻___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I see a lion at the zoo. I see a monkey in a tree. I see a duck by the water. I also see a big elephant and a bear.</div>
+          <div class="zhpass">我在動物園看到一隻獅子。我看到一隻猴子在樹上。我看到一隻鴨子在水邊。我也看到一隻大象和一隻熊。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I see a lion at the zoo. I see a monkey in a tree. I see a duck by the water. I also see a big elephant and a bear.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我在動物園看到一隻獅子。我看到一隻猴子在樹上。我看到一隻鴨子在水邊。我也看到一隻大象和一隻熊。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="7">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🦁 「獅子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="lion" data-value="monkey">monkey</button><button class="qopt" data-answer="lion" data-value="bear">bear</button><button class="qopt" data-answer="lion" data-value="lion">lion</button><button class="qopt" data-answer="lion" data-value="elephant">elephant</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🐵 「猴子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="monkey" data-value="duck">duck</button><button class="qopt" data-answer="monkey" data-value="elephant">elephant</button><button class="qopt" data-answer="monkey" data-value="lion">lion</button><button class="qopt" data-answer="monkey" data-value="monkey">monkey</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🦆 「鴨子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="duck" data-value="bear">bear</button><button class="qopt" data-answer="duck" data-value="monkey">monkey</button><button class="qopt" data-answer="duck" data-value="elephant">elephant</button><button class="qopt" data-answer="duck" data-value="duck">duck</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🐻 「熊」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="bear" data-value="monkey">monkey</button><button class="qopt" data-answer="bear" data-value="duck">duck</button><button class="qopt" data-answer="bear" data-value="elephant">elephant</button><button class="qopt" data-answer="bear" data-value="bear">bear</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🐘 「大象」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="elephant" data-value="bear">bear</button><button class="qopt" data-answer="elephant" data-value="elephant">elephant</button><button class="qopt" data-answer="elephant" data-value="monkey">monkey</button><button class="qopt" data-answer="elephant" data-value="lion">lion</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(7, this.checked)"> ⭐ Day 7 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="8">
+      <summary><span class="dayno">Day 8</span><span class="ico">📏</span><span class="daytitle">大小外觀</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🐘</div>
+          <div class="wtext"><b>big</b><span>大的</span></div>
+          <button class="speak" onclick='speakText("big","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("大的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐭</div>
+          <div class="wtext"><b>small</b><span>小的</span></div>
+          <button class="speak" onclick='speakText("small","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("小的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐍</div>
+          <div class="wtext"><b>long</b><span>長的</span></div>
+          <button class="speak" onclick='speakText("long","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("長的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🦔</div>
+          <div class="wtext"><b>short</b><span>短的</span></div>
+          <button class="speak" onclick='speakText("short","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("短的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🥰</div>
+          <div class="wtext"><b>cute</b><span>可愛的</span></div>
+          <button class="speak" onclick='speakText("cute","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("可愛的","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>It is ___.</b><div class="zhline">它是___的。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("It is apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("它是___的。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">The elephant is big. The mouse is small. The snake is long. The rabbit has a short tail, and it is very cute.</div>
+          <div class="zhpass">大象很大。老鼠很小。蛇很長。兔子的尾巴很短，而且牠非常可愛。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("The elephant is big. The mouse is small. The snake is long. The rabbit has a short tail, and it is very cute.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("大象很大。老鼠很小。蛇很長。兔子的尾巴很短，而且牠非常可愛。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="8">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🐘 「大的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="big" data-value="short">short</button><button class="qopt" data-answer="big" data-value="long">long</button><button class="qopt" data-answer="big" data-value="big">big</button><button class="qopt" data-answer="big" data-value="small">small</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🐭 「小的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="small" data-value="cute">cute</button><button class="qopt" data-answer="small" data-value="short">short</button><button class="qopt" data-answer="small" data-value="small">small</button><button class="qopt" data-answer="small" data-value="long">long</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🐍 「長的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="long" data-value="long">long</button><button class="qopt" data-answer="long" data-value="cute">cute</button><button class="qopt" data-answer="long" data-value="short">short</button><button class="qopt" data-answer="long" data-value="big">big</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🦔 「短的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="short" data-value="short">short</button><button class="qopt" data-answer="short" data-value="small">small</button><button class="qopt" data-answer="short" data-value="cute">cute</button><button class="qopt" data-answer="short" data-value="long">long</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🥰 「可愛的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="cute" data-value="big">big</button><button class="qopt" data-answer="cute" data-value="cute">cute</button><button class="qopt" data-answer="cute" data-value="small">small</button><button class="qopt" data-answer="cute" data-value="long">long</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(8, this.checked)"> ⭐ Day 8 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="9">
+      <summary><span class="dayno">Day 9</span><span class="ico">🐰</span><span class="daytitle">描述動物</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">⚡</div>
+          <div class="wtext"><b>fast</b><span>快的</span></div>
+          <button class="speak" onclick='speakText("fast","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("快的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐢</div>
+          <div class="wtext"><b>slow</b><span>慢的</span></div>
+          <button class="speak" onclick='speakText("slow","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("慢的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">😆</div>
+          <div class="wtext"><b>funny</b><span>有趣的</span></div>
+          <button class="speak" onclick='speakText("funny","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("有趣的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">💪</div>
+          <div class="wtext"><b>strong</b><span>強壯的</span></div>
+          <button class="speak" onclick='speakText("strong","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("強壯的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🥰</div>
+          <div class="wtext"><b>cute</b><span>可愛的</span></div>
+          <button class="speak" onclick='speakText("cute","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("可愛的","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>It is a cute ___.</b><div class="zhline">它是一隻可愛的___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("It is a cute apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("它是一隻可愛的___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">The rabbit is cute and fast. The turtle is slow. The lion is strong. The monkey is funny and likes to play.</div>
+          <div class="zhpass">兔子很可愛而且跑得快。烏龜很慢。獅子很強壯。猴子很有趣，也喜歡玩。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("The rabbit is cute and fast. The turtle is slow. The lion is strong. The monkey is funny and likes to play.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("兔子很可愛而且跑得快。烏龜很慢。獅子很強壯。猴子很有趣，也喜歡玩。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="9">
+          
+        <div class="qitem">
+          <div class="qtitle">1. ⚡ 「快的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="fast" data-value="cute">cute</button><button class="qopt" data-answer="fast" data-value="fast">fast</button><button class="qopt" data-answer="fast" data-value="strong">strong</button><button class="qopt" data-answer="fast" data-value="slow">slow</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🐢 「慢的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="slow" data-value="strong">strong</button><button class="qopt" data-answer="slow" data-value="funny">funny</button><button class="qopt" data-answer="slow" data-value="fast">fast</button><button class="qopt" data-answer="slow" data-value="slow">slow</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 😆 「有趣的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="funny" data-value="funny">funny</button><button class="qopt" data-answer="funny" data-value="fast">fast</button><button class="qopt" data-answer="funny" data-value="cute">cute</button><button class="qopt" data-answer="funny" data-value="slow">slow</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 💪 「強壯的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="strong" data-value="cute">cute</button><button class="qopt" data-answer="strong" data-value="slow">slow</button><button class="qopt" data-answer="strong" data-value="funny">funny</button><button class="qopt" data-answer="strong" data-value="strong">strong</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🥰 「可愛的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="cute" data-value="cute">cute</button><button class="qopt" data-answer="cute" data-value="slow">slow</button><button class="qopt" data-answer="cute" data-value="fast">fast</button><button class="qopt" data-answer="cute" data-value="strong">strong</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(9, this.checked)"> ⭐ Day 9 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="10">
+      <summary><span class="dayno">Day 10</span><span class="ico">⭐</span><span class="daytitle">Animal Boss 動物大挑戰</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🐶</div>
+          <div class="wtext"><b>dog</b><span>狗</span></div>
+          <button class="speak" onclick='speakText("dog","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("狗","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐰</div>
+          <div class="wtext"><b>rabbit</b><span>兔子</span></div>
+          <button class="speak" onclick='speakText("rabbit","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("兔子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🦁</div>
+          <div class="wtext"><b>lion</b><span>獅子</span></div>
+          <button class="speak" onclick='speakText("lion","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("獅子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🐘</div>
+          <div class="wtext"><b>elephant</b><span>大象</span></div>
+          <button class="speak" onclick='speakText("elephant","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("大象","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🥰</div>
+          <div class="wtext"><b>cute</b><span>可愛的</span></div>
+          <button class="speak" onclick='speakText("cute","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("可愛的","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I see a ___.</b><div class="zhline">我看到一隻___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I see a apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我看到一隻___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I see a dog and a rabbit. The rabbit is cute. I see a lion near a big rock. The elephant is big and strong.</div>
+          <div class="zhpass">我看到一隻狗和一隻兔子。兔子很可愛。我在大石頭附近看到一隻獅子。大象又大又強壯。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I see a dog and a rabbit. The rabbit is cute. I see a lion near a big rock. The elephant is big and strong.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我看到一隻狗和一隻兔子。兔子很可愛。我在大石頭附近看到一隻獅子。大象又大又強壯。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="10">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🐶 「狗」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="dog" data-value="lion">lion</button><button class="qopt" data-answer="dog" data-value="elephant">elephant</button><button class="qopt" data-answer="dog" data-value="dog">dog</button><button class="qopt" data-answer="dog" data-value="rabbit">rabbit</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🐰 「兔子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="rabbit" data-value="lion">lion</button><button class="qopt" data-answer="rabbit" data-value="cute">cute</button><button class="qopt" data-answer="rabbit" data-value="rabbit">rabbit</button><button class="qopt" data-answer="rabbit" data-value="elephant">elephant</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🦁 「獅子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="lion" data-value="rabbit">rabbit</button><button class="qopt" data-answer="lion" data-value="elephant">elephant</button><button class="qopt" data-answer="lion" data-value="lion">lion</button><button class="qopt" data-answer="lion" data-value="dog">dog</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🐘 「大象」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="elephant" data-value="rabbit">rabbit</button><button class="qopt" data-answer="elephant" data-value="lion">lion</button><button class="qopt" data-answer="elephant" data-value="elephant">elephant</button><button class="qopt" data-answer="elephant" data-value="dog">dog</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🥰 「可愛的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="cute" data-value="rabbit">rabbit</button><button class="qopt" data-answer="cute" data-value="cute">cute</button><button class="qopt" data-answer="cute" data-value="lion">lion</button><button class="qopt" data-answer="cute" data-value="dog">dog</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(10, this.checked)"> ⭐ Day 10 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="11">
+      <summary><span class="dayno">Day 11</span><span class="ico">🎒</span><span class="daytitle">School 1 學校用品</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">📘</div>
+          <div class="wtext"><b>book</b><span>書</span></div>
+          <button class="speak" onclick='speakText("book","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("書","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🖊️</div>
+          <div class="wtext"><b>pen</b><span>筆</span></div>
+          <button class="speak" onclick='speakText("pen","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("筆","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">✏️</div>
+          <div class="wtext"><b>pencil</b><span>鉛筆</span></div>
+          <button class="speak" onclick='speakText("pencil","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("鉛筆","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">📏</div>
+          <div class="wtext"><b>ruler</b><span>尺</span></div>
+          <button class="speak" onclick='speakText("ruler","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("尺","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🧽</div>
+          <div class="wtext"><b>eraser</b><span>橡皮擦</span></div>
+          <button class="speak" onclick='speakText("eraser","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("橡皮擦","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I have a ___.</b><div class="zhline">我有一個___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I have a apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我有一個___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I have a book and a pencil. I also have a pen and a ruler. My eraser is small. I put them in my school bag.</div>
+          <div class="zhpass">我有一本書和一枝鉛筆。我也有一枝筆和一把尺。我的橡皮擦很小。我把它們放進書包裡。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I have a book and a pencil. I also have a pen and a ruler. My eraser is small. I put them in my school bag.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我有一本書和一枝鉛筆。我也有一枝筆和一把尺。我的橡皮擦很小。我把它們放進書包裡。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="11">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 📘 「書」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="book" data-value="ruler">ruler</button><button class="qopt" data-answer="book" data-value="pencil">pencil</button><button class="qopt" data-answer="book" data-value="eraser">eraser</button><button class="qopt" data-answer="book" data-value="book">book</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🖊️ 「筆」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="pen" data-value="pencil">pencil</button><button class="qopt" data-answer="pen" data-value="pen">pen</button><button class="qopt" data-answer="pen" data-value="eraser">eraser</button><button class="qopt" data-answer="pen" data-value="book">book</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. ✏️ 「鉛筆」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="pencil" data-value="pencil">pencil</button><button class="qopt" data-answer="pencil" data-value="eraser">eraser</button><button class="qopt" data-answer="pencil" data-value="book">book</button><button class="qopt" data-answer="pencil" data-value="pen">pen</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 📏 「尺」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="ruler" data-value="pen">pen</button><button class="qopt" data-answer="ruler" data-value="pencil">pencil</button><button class="qopt" data-answer="ruler" data-value="book">book</button><button class="qopt" data-answer="ruler" data-value="ruler">ruler</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🧽 「橡皮擦」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="eraser" data-value="ruler">ruler</button><button class="qopt" data-answer="eraser" data-value="book">book</button><button class="qopt" data-answer="eraser" data-value="pen">pen</button><button class="qopt" data-answer="eraser" data-value="eraser">eraser</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(11, this.checked)"> ⭐ Day 11 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="12">
+      <summary><span class="dayno">Day 12</span><span class="ico">🪑</span><span class="daytitle">School 2 學校用品</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🎒</div>
+          <div class="wtext"><b>bag</b><span>書包</span></div>
+          <button class="speak" onclick='speakText("bag","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("書包","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🪑</div>
+          <div class="wtext"><b>desk</b><span>桌子</span></div>
+          <button class="speak" onclick='speakText("desk","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("桌子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">💺</div>
+          <div class="wtext"><b>chair</b><span>椅子</span></div>
+          <button class="speak" onclick='speakText("chair","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("椅子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">📦</div>
+          <div class="wtext"><b>box</b><span>盒子</span></div>
+          <button class="speak" onclick='speakText("box","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("盒子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">📓</div>
+          <div class="wtext"><b>notebook</b><span>筆記本</span></div>
+          <button class="speak" onclick='speakText("notebook","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("筆記本","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>This is my ___.</b><div class="zhline">這是我的___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("This is my apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("這是我的___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">This is my bag. This is my desk and chair. My pencil box is on the desk. My notebook is in my bag.</div>
+          <div class="zhpass">這是我的書包。這是我的桌子和椅子。我的鉛筆盒在桌上。我的筆記本在書包裡。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("This is my bag. This is my desk and chair. My pencil box is on the desk. My notebook is in my bag.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("這是我的書包。這是我的桌子和椅子。我的鉛筆盒在桌上。我的筆記本在書包裡。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="12">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🎒 「書包」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="bag" data-value="chair">chair</button><button class="qopt" data-answer="bag" data-value="desk">desk</button><button class="qopt" data-answer="bag" data-value="notebook">notebook</button><button class="qopt" data-answer="bag" data-value="bag">bag</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🪑 「桌子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="desk" data-value="desk">desk</button><button class="qopt" data-answer="desk" data-value="bag">bag</button><button class="qopt" data-answer="desk" data-value="notebook">notebook</button><button class="qopt" data-answer="desk" data-value="box">box</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 💺 「椅子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="chair" data-value="bag">bag</button><button class="qopt" data-answer="chair" data-value="chair">chair</button><button class="qopt" data-answer="chair" data-value="desk">desk</button><button class="qopt" data-answer="chair" data-value="notebook">notebook</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 📦 「盒子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="box" data-value="chair">chair</button><button class="qopt" data-answer="box" data-value="bag">bag</button><button class="qopt" data-answer="box" data-value="box">box</button><button class="qopt" data-answer="box" data-value="notebook">notebook</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 📓 「筆記本」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="notebook" data-value="chair">chair</button><button class="qopt" data-answer="notebook" data-value="bag">bag</button><button class="qopt" data-answer="notebook" data-value="notebook">notebook</button><button class="qopt" data-answer="notebook" data-value="desk">desk</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(12, this.checked)"> ⭐ Day 12 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="13">
+      <summary><span class="dayno">Day 13</span><span class="ico">🔎</span><span class="daytitle">找東西</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">❓</div>
+          <div class="wtext"><b>where</b><span>哪裡</span></div>
+          <button class="speak" onclick='speakText("where","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("哪裡","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👇</div>
+          <div class="wtext"><b>here</b><span>這裡</span></div>
+          <button class="speak" onclick='speakText("here","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("這裡","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👉</div>
+          <div class="wtext"><b>there</b><span>那裡</span></div>
+          <button class="speak" onclick='speakText("there","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("那裡","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🙋</div>
+          <div class="wtext"><b>my</b><span>我的</span></div>
+          <button class="speak" onclick='speakText("my","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("我的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🫵</div>
+          <div class="wtext"><b>your</b><span>你的</span></div>
+          <button class="speak" onclick='speakText("your","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("你的","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>Where is my ___?</b><div class="zhline">我的___在哪裡？</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("Where is my apple?","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我的___在哪裡？","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">Where is my pencil? It is here. Where is your book? It is over there. My bag is here, and your bag is there.</div>
+          <div class="zhpass">我的鉛筆在哪裡？它在這裡。你的書在哪裡？它在那裡。我的書包在這裡，你的書包在那裡。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("Where is my pencil? It is here. Where is your book? It is over there. My bag is here, and your bag is there.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我的鉛筆在哪裡？它在這裡。你的書在哪裡？它在那裡。我的書包在這裡，你的書包在那裡。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="13">
+          
+        <div class="qitem">
+          <div class="qtitle">1. ❓ 「哪裡」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="where" data-value="your">your</button><button class="qopt" data-answer="where" data-value="here">here</button><button class="qopt" data-answer="where" data-value="there">there</button><button class="qopt" data-answer="where" data-value="where">where</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 👇 「這裡」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="here" data-value="where">where</button><button class="qopt" data-answer="here" data-value="my">my</button><button class="qopt" data-answer="here" data-value="here">here</button><button class="qopt" data-answer="here" data-value="there">there</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 👉 「那裡」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="there" data-value="here">here</button><button class="qopt" data-answer="there" data-value="my">my</button><button class="qopt" data-answer="there" data-value="there">there</button><button class="qopt" data-answer="there" data-value="where">where</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🙋 「我的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="my" data-value="where">where</button><button class="qopt" data-answer="my" data-value="my">my</button><button class="qopt" data-answer="my" data-value="here">here</button><button class="qopt" data-answer="my" data-value="your">your</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🫵 「你的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="your" data-value="here">here</button><button class="qopt" data-answer="your" data-value="your">your</button><button class="qopt" data-answer="your" data-value="there">there</button><button class="qopt" data-answer="your" data-value="where">where</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(13, this.checked)"> ⭐ Day 13 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="14">
+      <summary><span class="dayno">Day 14</span><span class="ico">📍</span><span class="daytitle">位置</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">📦</div>
+          <div class="wtext"><b>in</b><span>在裡面</span></div>
+          <button class="speak" onclick='speakText("in","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("在裡面","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">⬆️</div>
+          <div class="wtext"><b>on</b><span>在上面</span></div>
+          <button class="speak" onclick='speakText("on","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("在上面","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">⬇️</div>
+          <div class="wtext"><b>under</b><span>在下面</span></div>
+          <button class="speak" onclick='speakText("under","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("在下面","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👇</div>
+          <div class="wtext"><b>here</b><span>這裡</span></div>
+          <button class="speak" onclick='speakText("here","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("這裡","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👉</div>
+          <div class="wtext"><b>there</b><span>那裡</span></div>
+          <button class="speak" onclick='speakText("there","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("那裡","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>It is on the ___.</b><div class="zhline">它在___上面。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("It is on the apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("它在___上面。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">My book is on the desk. My pencil is in the box. My bag is under the chair. My ruler is here, and my eraser is there.</div>
+          <div class="zhpass">我的書在桌上。我的鉛筆在盒子裡。我的書包在椅子下面。我的尺在這裡，橡皮擦在那裡。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("My book is on the desk. My pencil is in the box. My bag is under the chair. My ruler is here, and my eraser is there.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我的書在桌上。我的鉛筆在盒子裡。我的書包在椅子下面。我的尺在這裡，橡皮擦在那裡。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="14">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 📦 「在裡面」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="in" data-value="here">here</button><button class="qopt" data-answer="in" data-value="there">there</button><button class="qopt" data-answer="in" data-value="in">in</button><button class="qopt" data-answer="in" data-value="on">on</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. ⬆️ 「在上面」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="on" data-value="on">on</button><button class="qopt" data-answer="on" data-value="here">here</button><button class="qopt" data-answer="on" data-value="under">under</button><button class="qopt" data-answer="on" data-value="in">in</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. ⬇️ 「在下面」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="under" data-value="there">there</button><button class="qopt" data-answer="under" data-value="here">here</button><button class="qopt" data-answer="under" data-value="on">on</button><button class="qopt" data-answer="under" data-value="under">under</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 👇 「這裡」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="here" data-value="there">there</button><button class="qopt" data-answer="here" data-value="in">in</button><button class="qopt" data-answer="here" data-value="here">here</button><button class="qopt" data-answer="here" data-value="on">on</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 👉 「那裡」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="there" data-value="there">there</button><button class="qopt" data-answer="there" data-value="under">under</button><button class="qopt" data-answer="there" data-value="here">here</button><button class="qopt" data-answer="there" data-value="on">on</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(14, this.checked)"> ⭐ Day 14 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="15">
+      <summary><span class="dayno">Day 15</span><span class="ico">⭐</span><span class="daytitle">School Boss 學校大挑戰</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">📘</div>
+          <div class="wtext"><b>book</b><span>書</span></div>
+          <button class="speak" onclick='speakText("book","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("書","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🎒</div>
+          <div class="wtext"><b>bag</b><span>書包</span></div>
+          <button class="speak" onclick='speakText("bag","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("書包","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🪑</div>
+          <div class="wtext"><b>desk</b><span>桌子</span></div>
+          <button class="speak" onclick='speakText("desk","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("桌子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">⬇️</div>
+          <div class="wtext"><b>under</b><span>在下面</span></div>
+          <button class="speak" onclick='speakText("under","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("在下面","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">✏️</div>
+          <div class="wtext"><b>pencil</b><span>鉛筆</span></div>
+          <button class="speak" onclick='speakText("pencil","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("鉛筆","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>Where is my ___?</b><div class="zhline">我的___在哪裡？</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("Where is my apple?","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我的___在哪裡？","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">Where is my book? It is on the desk. My pencil is in my bag. The bag is under the chair. Now I am ready for class.</div>
+          <div class="zhpass">我的書在哪裡？它在桌上。我的鉛筆在書包裡。書包在椅子下面。現在我準備好上課了。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("Where is my book? It is on the desk. My pencil is in my bag. The bag is under the chair. Now I am ready for class.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我的書在哪裡？它在桌上。我的鉛筆在書包裡。書包在椅子下面。現在我準備好上課了。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="15">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 📘 「書」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="book" data-value="pencil">pencil</button><button class="qopt" data-answer="book" data-value="book">book</button><button class="qopt" data-answer="book" data-value="desk">desk</button><button class="qopt" data-answer="book" data-value="bag">bag</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🎒 「書包」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="bag" data-value="under">under</button><button class="qopt" data-answer="bag" data-value="bag">bag</button><button class="qopt" data-answer="bag" data-value="pencil">pencil</button><button class="qopt" data-answer="bag" data-value="book">book</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🪑 「桌子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="desk" data-value="desk">desk</button><button class="qopt" data-answer="desk" data-value="pencil">pencil</button><button class="qopt" data-answer="desk" data-value="book">book</button><button class="qopt" data-answer="desk" data-value="under">under</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. ⬇️ 「在下面」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="under" data-value="under">under</button><button class="qopt" data-answer="under" data-value="desk">desk</button><button class="qopt" data-answer="under" data-value="book">book</button><button class="qopt" data-answer="under" data-value="bag">bag</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. ✏️ 「鉛筆」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="pencil" data-value="desk">desk</button><button class="qopt" data-answer="pencil" data-value="bag">bag</button><button class="qopt" data-answer="pencil" data-value="book">book</button><button class="qopt" data-answer="pencil" data-value="pencil">pencil</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(15, this.checked)"> ⭐ Day 15 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="16">
+      <summary><span class="dayno">Day 16</span><span class="ico">🏃</span><span class="daytitle">Actions 1 動作</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🏃</div>
+          <div class="wtext"><b>run</b><span>跑</span></div>
+          <button class="speak" onclick='speakText("run","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("跑","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🤸</div>
+          <div class="wtext"><b>jump</b><span>跳</span></div>
+          <button class="speak" onclick='speakText("jump","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("跳","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🚶</div>
+          <div class="wtext"><b>walk</b><span>走路</span></div>
+          <button class="speak" onclick='speakText("walk","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("走路","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🏊</div>
+          <div class="wtext"><b>swim</b><span>游泳</span></div>
+          <button class="speak" onclick='speakText("swim","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("游泳","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">📖</div>
+          <div class="wtext"><b>read</b><span>閱讀</span></div>
+          <button class="speak" onclick='speakText("read","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("閱讀","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I can ___.</b><div class="zhline">我會___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I can apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我會___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I can run and jump. I can walk to the park. I can swim with my family. At home, I can read a book.</div>
+          <div class="zhpass">我會跑也會跳。我可以走路去公園。我可以和家人一起游泳。在家裡，我可以看書。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I can run and jump. I can walk to the park. I can swim with my family. At home, I can read a book.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我會跑也會跳。我可以走路去公園。我可以和家人一起游泳。在家裡，我可以看書。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="16">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🏃 「跑」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="run" data-value="walk">walk</button><button class="qopt" data-answer="run" data-value="read">read</button><button class="qopt" data-answer="run" data-value="run">run</button><button class="qopt" data-answer="run" data-value="swim">swim</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🤸 「跳」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="jump" data-value="run">run</button><button class="qopt" data-answer="jump" data-value="swim">swim</button><button class="qopt" data-answer="jump" data-value="jump">jump</button><button class="qopt" data-answer="jump" data-value="walk">walk</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🚶 「走路」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="walk" data-value="walk">walk</button><button class="qopt" data-answer="walk" data-value="run">run</button><button class="qopt" data-answer="walk" data-value="jump">jump</button><button class="qopt" data-answer="walk" data-value="read">read</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🏊 「游泳」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="swim" data-value="swim">swim</button><button class="qopt" data-answer="swim" data-value="walk">walk</button><button class="qopt" data-answer="swim" data-value="read">read</button><button class="qopt" data-answer="swim" data-value="jump">jump</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 📖 「閱讀」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="read" data-value="jump">jump</button><button class="qopt" data-answer="read" data-value="walk">walk</button><button class="qopt" data-answer="read" data-value="read">read</button><button class="qopt" data-answer="read" data-value="swim">swim</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(16, this.checked)"> ⭐ Day 16 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="17">
+      <summary><span class="dayno">Day 17</span><span class="ico">🎨</span><span class="daytitle">Actions 2 動作</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">✍️</div>
+          <div class="wtext"><b>write</b><span>寫</span></div>
+          <button class="speak" onclick='speakText("write","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("寫","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🎨</div>
+          <div class="wtext"><b>draw</b><span>畫</span></div>
+          <button class="speak" onclick='speakText("draw","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("畫","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🎤</div>
+          <div class="wtext"><b>sing</b><span>唱歌</span></div>
+          <button class="speak" onclick='speakText("sing","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("唱歌","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">💃</div>
+          <div class="wtext"><b>dance</b><span>跳舞</span></div>
+          <button class="speak" onclick='speakText("dance","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("跳舞","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🎮</div>
+          <div class="wtext"><b>play</b><span>玩</span></div>
+          <button class="speak" onclick='speakText("play","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("玩","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I can ___.</b><div class="zhline">我會___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I can apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我會___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I can write my name. I can draw a cat. I can sing and dance. After homework, I can play for a while.</div>
+          <div class="zhpass">我會寫自己的名字。我會畫一隻貓。我會唱歌和跳舞。寫完功課後，我可以玩一下。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I can write my name. I can draw a cat. I can sing and dance. After homework, I can play for a while.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我會寫自己的名字。我會畫一隻貓。我會唱歌和跳舞。寫完功課後，我可以玩一下。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="17">
+          
+        <div class="qitem">
+          <div class="qtitle">1. ✍️ 「寫」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="write" data-value="sing">sing</button><button class="qopt" data-answer="write" data-value="write">write</button><button class="qopt" data-answer="write" data-value="dance">dance</button><button class="qopt" data-answer="write" data-value="draw">draw</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🎨 「畫」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="draw" data-value="draw">draw</button><button class="qopt" data-answer="draw" data-value="dance">dance</button><button class="qopt" data-answer="draw" data-value="sing">sing</button><button class="qopt" data-answer="draw" data-value="write">write</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🎤 「唱歌」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="sing" data-value="sing">sing</button><button class="qopt" data-answer="sing" data-value="draw">draw</button><button class="qopt" data-answer="sing" data-value="dance">dance</button><button class="qopt" data-answer="sing" data-value="write">write</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 💃 「跳舞」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="dance" data-value="draw">draw</button><button class="qopt" data-answer="dance" data-value="write">write</button><button class="qopt" data-answer="dance" data-value="sing">sing</button><button class="qopt" data-answer="dance" data-value="dance">dance</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🎮 「玩」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="play" data-value="play">play</button><button class="qopt" data-answer="play" data-value="dance">dance</button><button class="qopt" data-answer="play" data-value="sing">sing</button><button class="qopt" data-answer="play" data-value="write">write</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(17, this.checked)"> ⭐ Day 17 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="18">
+      <summary><span class="dayno">Day 18</span><span class="ico">❓</span><span class="daytitle">Can you? 你會嗎</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">✅</div>
+          <div class="wtext"><b>can</b><span>會</span></div>
+          <button class="speak" onclick='speakText("can","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("會","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">❌</div>
+          <div class="wtext"><b>can&#x27;t</b><span>不會</span></div>
+          <button class="speak" onclick='speakText("can't","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("不會","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👍</div>
+          <div class="wtext"><b>yes</b><span>是</span></div>
+          <button class="speak" onclick='speakText("yes","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("是","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👎</div>
+          <div class="wtext"><b>no</b><span>不是</span></div>
+          <button class="speak" onclick='speakText("no","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("不是","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🌱</div>
+          <div class="wtext"><b>try</b><span>試試看</span></div>
+          <button class="speak" onclick='speakText("try","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("試試看","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>Can you ___?</b><div class="zhline">你會___嗎？</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("Can you apple?","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("你會___嗎？","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">Can you swim? Yes, I can. Can you fly? No, I can&#x27;t. I can try new things. Trying is a good way to learn.</div>
+          <div class="zhpass">你會游泳嗎？是的，我會。你會飛嗎？不，我不會。我可以嘗試新事物。嘗試是很好的學習方式。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("Can you swim? Yes, I can. Can you fly? No, I can't. I can try new things. Trying is a good way to learn.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("你會游泳嗎？是的，我會。你會飛嗎？不，我不會。我可以嘗試新事物。嘗試是很好的學習方式。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="18">
+          
+        <div class="qitem">
+          <div class="qtitle">1. ✅ 「會」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="can" data-value="yes">yes</button><button class="qopt" data-answer="can" data-value="try">try</button><button class="qopt" data-answer="can" data-value="can">can</button><button class="qopt" data-answer="can" data-value="can&#x27;t">can&#x27;t</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. ❌ 「不會」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="can&#x27;t" data-value="no">no</button><button class="qopt" data-answer="can&#x27;t" data-value="yes">yes</button><button class="qopt" data-answer="can&#x27;t" data-value="try">try</button><button class="qopt" data-answer="can&#x27;t" data-value="can&#x27;t">can&#x27;t</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 👍 「是」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="yes" data-value="can">can</button><button class="qopt" data-answer="yes" data-value="can&#x27;t">can&#x27;t</button><button class="qopt" data-answer="yes" data-value="no">no</button><button class="qopt" data-answer="yes" data-value="yes">yes</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 👎 「不是」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="no" data-value="try">try</button><button class="qopt" data-answer="no" data-value="can">can</button><button class="qopt" data-answer="no" data-value="no">no</button><button class="qopt" data-answer="no" data-value="can&#x27;t">can&#x27;t</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🌱 「試試看」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="try" data-value="no">no</button><button class="qopt" data-answer="try" data-value="try">try</button><button class="qopt" data-answer="try" data-value="can">can</button><button class="qopt" data-answer="try" data-value="can&#x27;t">can&#x27;t</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(18, this.checked)"> ⭐ Day 18 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="19">
+      <summary><span class="dayno">Day 19</span><span class="ico">❤️</span><span class="daytitle">喜歡做的事</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">📖</div>
+          <div class="wtext"><b>read</b><span>閱讀</span></div>
+          <button class="speak" onclick='speakText("read","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("閱讀","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🎨</div>
+          <div class="wtext"><b>draw</b><span>畫畫</span></div>
+          <button class="speak" onclick='speakText("draw","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("畫畫","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🏊</div>
+          <div class="wtext"><b>swim</b><span>游泳</span></div>
+          <button class="speak" onclick='speakText("swim","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("游泳","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🎤</div>
+          <div class="wtext"><b>sing</b><span>唱歌</span></div>
+          <button class="speak" onclick='speakText("sing","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("唱歌","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🎮</div>
+          <div class="wtext"><b>play</b><span>玩</span></div>
+          <button class="speak" onclick='speakText("play","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("玩","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I like to ___.</b><div class="zhline">我喜歡___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I like to apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我喜歡___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I like to read after dinner. I like to draw animals. On weekends, I like to swim and play. Sometimes I like to sing, too.</div>
+          <div class="zhpass">晚餐後我喜歡閱讀。我喜歡畫動物。週末我喜歡游泳和玩。有時候我也喜歡唱歌。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I like to read after dinner. I like to draw animals. On weekends, I like to swim and play. Sometimes I like to sing, too.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("晚餐後我喜歡閱讀。我喜歡畫動物。週末我喜歡游泳和玩。有時候我也喜歡唱歌。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="19">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 📖 「閱讀」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="read" data-value="sing">sing</button><button class="qopt" data-answer="read" data-value="play">play</button><button class="qopt" data-answer="read" data-value="swim">swim</button><button class="qopt" data-answer="read" data-value="read">read</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🎨 「畫畫」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="draw" data-value="play">play</button><button class="qopt" data-answer="draw" data-value="sing">sing</button><button class="qopt" data-answer="draw" data-value="swim">swim</button><button class="qopt" data-answer="draw" data-value="draw">draw</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🏊 「游泳」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="swim" data-value="play">play</button><button class="qopt" data-answer="swim" data-value="swim">swim</button><button class="qopt" data-answer="swim" data-value="draw">draw</button><button class="qopt" data-answer="swim" data-value="sing">sing</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🎤 「唱歌」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="sing" data-value="swim">swim</button><button class="qopt" data-answer="sing" data-value="read">read</button><button class="qopt" data-answer="sing" data-value="sing">sing</button><button class="qopt" data-answer="sing" data-value="play">play</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🎮 「玩」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="play" data-value="draw">draw</button><button class="qopt" data-answer="play" data-value="play">play</button><button class="qopt" data-answer="play" data-value="swim">swim</button><button class="qopt" data-answer="play" data-value="read">read</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(19, this.checked)"> ⭐ Day 19 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="20">
+      <summary><span class="dayno">Day 20</span><span class="ico">⭐</span><span class="daytitle">Action Boss 動作大挑戰</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🏃</div>
+          <div class="wtext"><b>run</b><span>跑</span></div>
+          <button class="speak" onclick='speakText("run","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("跑","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🏊</div>
+          <div class="wtext"><b>swim</b><span>游泳</span></div>
+          <button class="speak" onclick='speakText("swim","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("游泳","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🎨</div>
+          <div class="wtext"><b>draw</b><span>畫畫</span></div>
+          <button class="speak" onclick='speakText("draw","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("畫畫","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🎤</div>
+          <div class="wtext"><b>sing</b><span>唱歌</span></div>
+          <button class="speak" onclick='speakText("sing","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("唱歌","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">📖</div>
+          <div class="wtext"><b>read</b><span>閱讀</span></div>
+          <button class="speak" onclick='speakText("read","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("閱讀","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I can ___.</b><div class="zhline">我會___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I can apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我會___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I can run and swim. I like to draw after school. I can sing a short song. Before bed, I like to read.</div>
+          <div class="zhpass">我會跑步和游泳。放學後我喜歡畫畫。我會唱一首短歌。睡前我喜歡閱讀。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I can run and swim. I like to draw after school. I can sing a short song. Before bed, I like to read.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我會跑步和游泳。放學後我喜歡畫畫。我會唱一首短歌。睡前我喜歡閱讀。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="20">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🏃 「跑」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="run" data-value="run">run</button><button class="qopt" data-answer="run" data-value="draw">draw</button><button class="qopt" data-answer="run" data-value="sing">sing</button><button class="qopt" data-answer="run" data-value="swim">swim</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🏊 「游泳」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="swim" data-value="swim">swim</button><button class="qopt" data-answer="swim" data-value="draw">draw</button><button class="qopt" data-answer="swim" data-value="sing">sing</button><button class="qopt" data-answer="swim" data-value="read">read</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🎨 「畫畫」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="draw" data-value="draw">draw</button><button class="qopt" data-answer="draw" data-value="read">read</button><button class="qopt" data-answer="draw" data-value="sing">sing</button><button class="qopt" data-answer="draw" data-value="swim">swim</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🎤 「唱歌」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="sing" data-value="swim">swim</button><button class="qopt" data-answer="sing" data-value="read">read</button><button class="qopt" data-answer="sing" data-value="draw">draw</button><button class="qopt" data-answer="sing" data-value="sing">sing</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 📖 「閱讀」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="read" data-value="sing">sing</button><button class="qopt" data-answer="read" data-value="swim">swim</button><button class="qopt" data-answer="read" data-value="draw">draw</button><button class="qopt" data-answer="read" data-value="read">read</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(20, this.checked)"> ⭐ Day 20 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="21">
+      <summary><span class="dayno">Day 21</span><span class="ico">👨‍👩‍👦</span><span class="daytitle">Family 家人</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">👩</div>
+          <div class="wtext"><b>mom</b><span>媽媽</span></div>
+          <button class="speak" onclick='speakText("mom","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("媽媽","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👨</div>
+          <div class="wtext"><b>dad</b><span>爸爸</span></div>
+          <button class="speak" onclick='speakText("dad","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("爸爸","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👦</div>
+          <div class="wtext"><b>brother</b><span>兄弟</span></div>
+          <button class="speak" onclick='speakText("brother","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("兄弟","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👧</div>
+          <div class="wtext"><b>sister</b><span>姊妹</span></div>
+          <button class="speak" onclick='speakText("sister","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("姊妹","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👨‍👩‍👦</div>
+          <div class="wtext"><b>family</b><span>家人</span></div>
+          <button class="speak" onclick='speakText("family","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("家人","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>This is my ___.</b><div class="zhline">這是我的___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("This is my apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("這是我的___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">This is my family. This is my mom, and this is my dad. I have a brother and a sister. We like to eat and play together.</div>
+          <div class="zhpass">這是我的家人。這是我的媽媽，這是我的爸爸。我有一個兄弟和一個姊妹。我們喜歡一起吃飯和玩。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("This is my family. This is my mom, and this is my dad. I have a brother and a sister. We like to eat and play together.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("這是我的家人。這是我的媽媽，這是我的爸爸。我有一個兄弟和一個姊妹。我們喜歡一起吃飯和玩。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="21">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 👩 「媽媽」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="mom" data-value="family">family</button><button class="qopt" data-answer="mom" data-value="brother">brother</button><button class="qopt" data-answer="mom" data-value="dad">dad</button><button class="qopt" data-answer="mom" data-value="mom">mom</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 👨 「爸爸」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="dad" data-value="family">family</button><button class="qopt" data-answer="dad" data-value="brother">brother</button><button class="qopt" data-answer="dad" data-value="dad">dad</button><button class="qopt" data-answer="dad" data-value="mom">mom</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 👦 「兄弟」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="brother" data-value="dad">dad</button><button class="qopt" data-answer="brother" data-value="family">family</button><button class="qopt" data-answer="brother" data-value="brother">brother</button><button class="qopt" data-answer="brother" data-value="mom">mom</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 👧 「姊妹」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="sister" data-value="brother">brother</button><button class="qopt" data-answer="sister" data-value="sister">sister</button><button class="qopt" data-answer="sister" data-value="dad">dad</button><button class="qopt" data-answer="sister" data-value="family">family</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 👨‍👩‍👦 「家人」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="family" data-value="sister">sister</button><button class="qopt" data-answer="family" data-value="mom">mom</button><button class="qopt" data-answer="family" data-value="brother">brother</button><button class="qopt" data-answer="family" data-value="family">family</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(21, this.checked)"> ⭐ Day 21 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="22">
+      <summary><span class="dayno">Day 22</span><span class="ico">🙂</span><span class="daytitle">描述人物</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🧍</div>
+          <div class="wtext"><b>tall</b><span>高的</span></div>
+          <button class="speak" onclick='speakText("tall","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("高的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🧒</div>
+          <div class="wtext"><b>short</b><span>矮的</span></div>
+          <button class="speak" onclick='speakText("short","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("矮的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🙂</div>
+          <div class="wtext"><b>young</b><span>年輕的</span></div>
+          <button class="speak" onclick='speakText("young","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("年輕的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">😄</div>
+          <div class="wtext"><b>happy</b><span>開心的</span></div>
+          <button class="speak" onclick='speakText("happy","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("開心的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">😆</div>
+          <div class="wtext"><b>funny</b><span>有趣的</span></div>
+          <button class="speak" onclick='speakText("funny","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("有趣的","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>He is ___. / She is ___.</b><div class="zhline">他／她是___的。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("He is apple. / She is apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("他／她是___的。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">My dad is tall. My sister is short. My mom is happy. My brother is funny. We laugh together every day.</div>
+          <div class="zhpass">我爸爸很高。我姊妹比較矮。我媽媽很開心。我兄弟很有趣。我們每天都會一起笑。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("My dad is tall. My sister is short. My mom is happy. My brother is funny. We laugh together every day.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我爸爸很高。我姊妹比較矮。我媽媽很開心。我兄弟很有趣。我們每天都會一起笑。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="22">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🧍 「高的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="tall" data-value="funny">funny</button><button class="qopt" data-answer="tall" data-value="tall">tall</button><button class="qopt" data-answer="tall" data-value="short">short</button><button class="qopt" data-answer="tall" data-value="young">young</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🧒 「矮的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="short" data-value="funny">funny</button><button class="qopt" data-answer="short" data-value="tall">tall</button><button class="qopt" data-answer="short" data-value="happy">happy</button><button class="qopt" data-answer="short" data-value="short">short</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🙂 「年輕的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="young" data-value="happy">happy</button><button class="qopt" data-answer="young" data-value="short">short</button><button class="qopt" data-answer="young" data-value="funny">funny</button><button class="qopt" data-answer="young" data-value="young">young</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 😄 「開心的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="happy" data-value="funny">funny</button><button class="qopt" data-answer="happy" data-value="happy">happy</button><button class="qopt" data-answer="happy" data-value="short">short</button><button class="qopt" data-answer="happy" data-value="tall">tall</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 😆 「有趣的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="funny" data-value="funny">funny</button><button class="qopt" data-answer="funny" data-value="happy">happy</button><button class="qopt" data-answer="funny" data-value="short">short</button><button class="qopt" data-answer="funny" data-value="young">young</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(22, this.checked)"> ⭐ Day 22 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="23">
+      <summary><span class="dayno">Day 23</span><span class="ico">👕</span><span class="daytitle">Clothes 衣服</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">👕</div>
+          <div class="wtext"><b>shirt</b><span>上衣</span></div>
+          <button class="speak" onclick='speakText("shirt","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("上衣","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👖</div>
+          <div class="wtext"><b>pants</b><span>褲子</span></div>
+          <button class="speak" onclick='speakText("pants","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("褲子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👟</div>
+          <div class="wtext"><b>shoes</b><span>鞋子</span></div>
+          <button class="speak" onclick='speakText("shoes","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("鞋子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🧢</div>
+          <div class="wtext"><b>hat</b><span>帽子</span></div>
+          <button class="speak" onclick='speakText("hat","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("帽子","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👗</div>
+          <div class="wtext"><b>dress</b><span>洋裝</span></div>
+          <button class="speak" onclick='speakText("dress","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("洋裝","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I have a ___ shirt.</b><div class="zhline">我有一件___色的上衣。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I have a apple shirt.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我有一件___色的上衣。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I have a blue shirt and black pants. My shoes are red. I have a yellow hat. My sister has a green dress.</div>
+          <div class="zhpass">我有一件藍色上衣和黑色褲子。我的鞋子是紅色的。我有一頂黃色帽子。我姊妹有一件綠色洋裝。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I have a blue shirt and black pants. My shoes are red. I have a yellow hat. My sister has a green dress.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我有一件藍色上衣和黑色褲子。我的鞋子是紅色的。我有一頂黃色帽子。我姊妹有一件綠色洋裝。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="23">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 👕 「上衣」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="shirt" data-value="shoes">shoes</button><button class="qopt" data-answer="shirt" data-value="hat">hat</button><button class="qopt" data-answer="shirt" data-value="shirt">shirt</button><button class="qopt" data-answer="shirt" data-value="pants">pants</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 👖 「褲子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="pants" data-value="shirt">shirt</button><button class="qopt" data-answer="pants" data-value="pants">pants</button><button class="qopt" data-answer="pants" data-value="shoes">shoes</button><button class="qopt" data-answer="pants" data-value="dress">dress</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 👟 「鞋子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="shoes" data-value="dress">dress</button><button class="qopt" data-answer="shoes" data-value="shoes">shoes</button><button class="qopt" data-answer="shoes" data-value="hat">hat</button><button class="qopt" data-answer="shoes" data-value="pants">pants</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🧢 「帽子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="hat" data-value="dress">dress</button><button class="qopt" data-answer="hat" data-value="pants">pants</button><button class="qopt" data-answer="hat" data-value="hat">hat</button><button class="qopt" data-answer="hat" data-value="shoes">shoes</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 👗 「洋裝」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="dress" data-value="hat">hat</button><button class="qopt" data-answer="dress" data-value="dress">dress</button><button class="qopt" data-answer="dress" data-value="shirt">shirt</button><button class="qopt" data-answer="dress" data-value="pants">pants</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(23, this.checked)"> ⭐ Day 23 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="24">
+      <summary><span class="dayno">Day 24</span><span class="ico">🎨</span><span class="daytitle">Colors 顏色</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🔴</div>
+          <div class="wtext"><b>red</b><span>紅色</span></div>
+          <button class="speak" onclick='speakText("red","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("紅色","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🔵</div>
+          <div class="wtext"><b>blue</b><span>藍色</span></div>
+          <button class="speak" onclick='speakText("blue","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("藍色","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🟢</div>
+          <div class="wtext"><b>green</b><span>綠色</span></div>
+          <button class="speak" onclick='speakText("green","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("綠色","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🟡</div>
+          <div class="wtext"><b>yellow</b><span>黃色</span></div>
+          <button class="speak" onclick='speakText("yellow","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("黃色","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">⚫</div>
+          <div class="wtext"><b>black</b><span>黑色</span></div>
+          <button class="speak" onclick='speakText("black","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("黑色","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>It is ___.</b><div class="zhline">它是___色。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("It is apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("它是___色。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">My bag is blue. My pencil is red. I have a green notebook and a yellow ruler. My shoes are black.</div>
+          <div class="zhpass">我的書包是藍色的。我的鉛筆是紅色的。我有一本綠色筆記本和一把黃色尺。我的鞋子是黑色的。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("My bag is blue. My pencil is red. I have a green notebook and a yellow ruler. My shoes are black.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我的書包是藍色的。我的鉛筆是紅色的。我有一本綠色筆記本和一把黃色尺。我的鞋子是黑色的。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="24">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🔴 「紅色」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="red" data-value="green">green</button><button class="qopt" data-answer="red" data-value="red">red</button><button class="qopt" data-answer="red" data-value="yellow">yellow</button><button class="qopt" data-answer="red" data-value="black">black</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🔵 「藍色」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="blue" data-value="black">black</button><button class="qopt" data-answer="blue" data-value="blue">blue</button><button class="qopt" data-answer="blue" data-value="yellow">yellow</button><button class="qopt" data-answer="blue" data-value="green">green</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🟢 「綠色」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="green" data-value="blue">blue</button><button class="qopt" data-answer="green" data-value="black">black</button><button class="qopt" data-answer="green" data-value="yellow">yellow</button><button class="qopt" data-answer="green" data-value="green">green</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🟡 「黃色」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="yellow" data-value="green">green</button><button class="qopt" data-answer="yellow" data-value="blue">blue</button><button class="qopt" data-answer="yellow" data-value="yellow">yellow</button><button class="qopt" data-answer="yellow" data-value="black">black</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. ⚫ 「黑色」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="black" data-value="red">red</button><button class="qopt" data-answer="black" data-value="green">green</button><button class="qopt" data-answer="black" data-value="black">black</button><button class="qopt" data-answer="black" data-value="blue">blue</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(24, this.checked)"> ⭐ Day 24 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="25">
+      <summary><span class="dayno">Day 25</span><span class="ico">⭐</span><span class="daytitle">People Boss 人物大挑戰</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">👩</div>
+          <div class="wtext"><b>mom</b><span>媽媽</span></div>
+          <button class="speak" onclick='speakText("mom","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("媽媽","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🧍</div>
+          <div class="wtext"><b>tall</b><span>高的</span></div>
+          <button class="speak" onclick='speakText("tall","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("高的","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👕</div>
+          <div class="wtext"><b>shirt</b><span>上衣</span></div>
+          <button class="speak" onclick='speakText("shirt","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("上衣","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🔵</div>
+          <div class="wtext"><b>blue</b><span>藍色</span></div>
+          <button class="speak" onclick='speakText("blue","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("藍色","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👟</div>
+          <div class="wtext"><b>shoes</b><span>鞋子</span></div>
+          <button class="speak" onclick='speakText("shoes","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("鞋子","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>This is my ___.</b><div class="zhline">這是我的___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("This is my apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("這是我的___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">This is my mom. She is tall and happy. She has a blue shirt and black shoes. We like to walk together.</div>
+          <div class="zhpass">這是我的媽媽。她很高也很開心。她穿著藍色上衣和黑色鞋子。我們喜歡一起散步。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("This is my mom. She is tall and happy. She has a blue shirt and black shoes. We like to walk together.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("這是我的媽媽。她很高也很開心。她穿著藍色上衣和黑色鞋子。我們喜歡一起散步。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="25">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 👩 「媽媽」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="mom" data-value="mom">mom</button><button class="qopt" data-answer="mom" data-value="blue">blue</button><button class="qopt" data-answer="mom" data-value="shirt">shirt</button><button class="qopt" data-answer="mom" data-value="shoes">shoes</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🧍 「高的」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="tall" data-value="blue">blue</button><button class="qopt" data-answer="tall" data-value="tall">tall</button><button class="qopt" data-answer="tall" data-value="shoes">shoes</button><button class="qopt" data-answer="tall" data-value="mom">mom</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 👕 「上衣」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="shirt" data-value="mom">mom</button><button class="qopt" data-answer="shirt" data-value="shirt">shirt</button><button class="qopt" data-answer="shirt" data-value="shoes">shoes</button><button class="qopt" data-answer="shirt" data-value="blue">blue</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🔵 「藍色」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="blue" data-value="mom">mom</button><button class="qopt" data-answer="blue" data-value="shoes">shoes</button><button class="qopt" data-answer="blue" data-value="tall">tall</button><button class="qopt" data-answer="blue" data-value="blue">blue</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 👟 「鞋子」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="shoes" data-value="blue">blue</button><button class="qopt" data-answer="shoes" data-value="shirt">shirt</button><button class="qopt" data-answer="shoes" data-value="shoes">shoes</button><button class="qopt" data-answer="shoes" data-value="tall">tall</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(25, this.checked)"> ⭐ Day 25 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="26">
+      <summary><span class="dayno">Day 26</span><span class="ico">☀️</span><span class="daytitle">Daily life 每日生活</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">⏰</div>
+          <div class="wtext"><b>get up</b><span>起床</span></div>
+          <button class="speak" onclick='speakText("get up","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("起床","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🍽️</div>
+          <div class="wtext"><b>eat</b><span>吃</span></div>
+          <button class="speak" onclick='speakText("eat","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("吃","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🚶</div>
+          <div class="wtext"><b>go</b><span>去</span></div>
+          <button class="speak" onclick='speakText("go","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("去","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🎮</div>
+          <div class="wtext"><b>play</b><span>玩</span></div>
+          <button class="speak" onclick='speakText("play","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("玩","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">😴</div>
+          <div class="wtext"><b>sleep</b><span>睡覺</span></div>
+          <button class="speak" onclick='speakText("sleep","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("睡覺","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I ___ every day.</b><div class="zhline">我每天___。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I apple every day.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我每天___。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I get up in the morning. I eat breakfast and go to school. After school, I play for a while. At night, I sleep in my bed.</div>
+          <div class="zhpass">我早上起床。我吃早餐，然後去上學。放學後，我會玩一下。晚上我在床上睡覺。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I get up in the morning. I eat breakfast and go to school. After school, I play for a while. At night, I sleep in my bed.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我早上起床。我吃早餐，然後去上學。放學後，我會玩一下。晚上我在床上睡覺。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="26">
+          
+        <div class="qitem">
+          <div class="qtitle">1. ⏰ 「起床」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="get up" data-value="eat">eat</button><button class="qopt" data-answer="get up" data-value="go">go</button><button class="qopt" data-answer="get up" data-value="get up">get up</button><button class="qopt" data-answer="get up" data-value="play">play</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🍽️ 「吃」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="eat" data-value="sleep">sleep</button><button class="qopt" data-answer="eat" data-value="play">play</button><button class="qopt" data-answer="eat" data-value="go">go</button><button class="qopt" data-answer="eat" data-value="eat">eat</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🚶 「去」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="go" data-value="go">go</button><button class="qopt" data-answer="go" data-value="eat">eat</button><button class="qopt" data-answer="go" data-value="play">play</button><button class="qopt" data-answer="go" data-value="sleep">sleep</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🎮 「玩」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="play" data-value="eat">eat</button><button class="qopt" data-answer="play" data-value="sleep">sleep</button><button class="qopt" data-answer="play" data-value="get up">get up</button><button class="qopt" data-answer="play" data-value="play">play</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 😴 「睡覺」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="sleep" data-value="play">play</button><button class="qopt" data-answer="sleep" data-value="sleep">sleep</button><button class="qopt" data-answer="sleep" data-value="go">go</button><button class="qopt" data-answer="sleep" data-value="eat">eat</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(26, this.checked)"> ⭐ Day 26 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="27">
+      <summary><span class="dayno">Day 27</span><span class="ico">🕐</span><span class="daytitle">Time of day 一天時間</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🌅</div>
+          <div class="wtext"><b>morning</b><span>早上</span></div>
+          <button class="speak" onclick='speakText("morning","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("早上","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">☀️</div>
+          <div class="wtext"><b>afternoon</b><span>下午</span></div>
+          <button class="speak" onclick='speakText("afternoon","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("下午","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🌇</div>
+          <div class="wtext"><b>evening</b><span>傍晚</span></div>
+          <button class="speak" onclick='speakText("evening","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("傍晚","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🌙</div>
+          <div class="wtext"><b>night</b><span>晚上</span></div>
+          <button class="speak" onclick='speakText("night","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("晚上","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">📅</div>
+          <div class="wtext"><b>today</b><span>今天</span></div>
+          <button class="speak" onclick='speakText("today","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("今天","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I play in the ___.</b><div class="zhline">我在___玩。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I play in the apple.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我在___玩。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I eat breakfast in the morning. I play in the afternoon. I eat dinner in the evening. At night, I read and go to sleep.</div>
+          <div class="zhpass">我早上吃早餐。我下午玩。我傍晚吃晚餐。晚上我閱讀，然後去睡覺。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I eat breakfast in the morning. I play in the afternoon. I eat dinner in the evening. At night, I read and go to sleep.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我早上吃早餐。我下午玩。我傍晚吃晚餐。晚上我閱讀，然後去睡覺。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="27">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🌅 「早上」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="morning" data-value="morning">morning</button><button class="qopt" data-answer="morning" data-value="today">today</button><button class="qopt" data-answer="morning" data-value="night">night</button><button class="qopt" data-answer="morning" data-value="afternoon">afternoon</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. ☀️ 「下午」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="afternoon" data-value="evening">evening</button><button class="qopt" data-answer="afternoon" data-value="morning">morning</button><button class="qopt" data-answer="afternoon" data-value="afternoon">afternoon</button><button class="qopt" data-answer="afternoon" data-value="night">night</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 🌇 「傍晚」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="evening" data-value="morning">morning</button><button class="qopt" data-answer="evening" data-value="today">today</button><button class="qopt" data-answer="evening" data-value="evening">evening</button><button class="qopt" data-answer="evening" data-value="night">night</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🌙 「晚上」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="night" data-value="afternoon">afternoon</button><button class="qopt" data-answer="night" data-value="morning">morning</button><button class="qopt" data-answer="night" data-value="evening">evening</button><button class="qopt" data-answer="night" data-value="night">night</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 📅 「今天」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="today" data-value="today">today</button><button class="qopt" data-answer="today" data-value="night">night</button><button class="qopt" data-answer="today" data-value="afternoon">afternoon</button><button class="qopt" data-answer="today" data-value="evening">evening</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(27, this.checked)"> ⭐ Day 27 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="28">
+      <summary><span class="dayno">Day 28</span><span class="ico">💬</span><span class="daytitle">Mini conversation 小對話</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">👋</div>
+          <div class="wtext"><b>hello</b><span>你好</span></div>
+          <button class="speak" onclick='speakText("hello","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("你好","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🙏</div>
+          <div class="wtext"><b>please</b><span>請</span></div>
+          <button class="speak" onclick='speakText("please","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("請","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">😊</div>
+          <div class="wtext"><b>thank you</b><span>謝謝</span></div>
+          <button class="speak" onclick='speakText("thank you","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("謝謝","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🙇</div>
+          <div class="wtext"><b>sorry</b><span>對不起</span></div>
+          <button class="speak" onclick='speakText("sorry","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("對不起","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👋</div>
+          <div class="wtext"><b>goodbye</b><span>再見</span></div>
+          <button class="speak" onclick='speakText("goodbye","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("再見","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>How are you? – I&#x27;m good.</b><div class="zhline">你好嗎？－我很好。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("How are you? – I'm good.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("你好嗎？－我很好。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">Hello! How are you? I&#x27;m good, thank you. Please sit here. Sorry, I have to go now. Goodbye!</div>
+          <div class="zhpass">你好！你好嗎？我很好，謝謝。請坐這裡。對不起，我現在得走了。再見！</div>
+          <div class="patbuttons">
+            <button onclick='speakText("Hello! How are you? I'm good, thank you. Please sit here. Sorry, I have to go now. Goodbye!","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("你好！你好嗎？我很好，謝謝。請坐這裡。對不起，我現在得走了。再見！","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="28">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 👋 「你好」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="hello" data-value="hello">hello</button><button class="qopt" data-answer="hello" data-value="goodbye">goodbye</button><button class="qopt" data-answer="hello" data-value="please">please</button><button class="qopt" data-answer="hello" data-value="thank you">thank you</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🙏 「請」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="please" data-value="sorry">sorry</button><button class="qopt" data-answer="please" data-value="thank you">thank you</button><button class="qopt" data-answer="please" data-value="please">please</button><button class="qopt" data-answer="please" data-value="hello">hello</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 😊 「謝謝」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="thank you" data-value="goodbye">goodbye</button><button class="qopt" data-answer="thank you" data-value="hello">hello</button><button class="qopt" data-answer="thank you" data-value="thank you">thank you</button><button class="qopt" data-answer="thank you" data-value="please">please</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🙇 「對不起」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="sorry" data-value="please">please</button><button class="qopt" data-answer="sorry" data-value="sorry">sorry</button><button class="qopt" data-answer="sorry" data-value="hello">hello</button><button class="qopt" data-answer="sorry" data-value="goodbye">goodbye</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 👋 「再見」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="goodbye" data-value="please">please</button><button class="qopt" data-answer="goodbye" data-value="sorry">sorry</button><button class="qopt" data-answer="goodbye" data-value="hello">hello</button><button class="qopt" data-answer="goodbye" data-value="goodbye">goodbye</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(28, this.checked)"> ⭐ Day 28 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="29">
+      <summary><span class="dayno">Day 29</span><span class="ico">🧩</span><span class="daytitle">Mix &amp; Match 綜合句型</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">❤️</div>
+          <div class="wtext"><b>like</b><span>喜歡</span></div>
+          <button class="speak" onclick='speakText("like","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("喜歡","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🎒</div>
+          <div class="wtext"><b>have</b><span>有</span></div>
+          <button class="speak" onclick='speakText("have","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("有","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">💪</div>
+          <div class="wtext"><b>can</b><span>會</span></div>
+          <button class="speak" onclick='speakText("can","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("會","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">👀</div>
+          <div class="wtext"><b>see</b><span>看見</span></div>
+          <button class="speak" onclick='speakText("see","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("看見","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🙋</div>
+          <div class="wtext"><b>want</b><span>想要</span></div>
+          <button class="speak" onclick='speakText("want","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("想要","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>Let&#x27;s make a sentence.</b><div class="zhline">我們來造句。</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("Let's make a sentence.","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我們來造句。","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I like apples. I have a blue bag. I can swim. I see a dog in the park. I want some juice.</div>
+          <div class="zhpass">我喜歡蘋果。我有一個藍色書包。我會游泳。我在公園看到一隻狗。我想喝一些果汁。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I like apples. I have a blue bag. I can swim. I see a dog in the park. I want some juice.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我喜歡蘋果。我有一個藍色書包。我會游泳。我在公園看到一隻狗。我想喝一些果汁。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="29">
+          
+        <div class="qitem">
+          <div class="qtitle">1. ❤️ 「喜歡」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="like" data-value="like">like</button><button class="qopt" data-answer="like" data-value="want">want</button><button class="qopt" data-answer="like" data-value="can">can</button><button class="qopt" data-answer="like" data-value="have">have</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🎒 「有」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="have" data-value="can">can</button><button class="qopt" data-answer="have" data-value="want">want</button><button class="qopt" data-answer="have" data-value="have">have</button><button class="qopt" data-answer="have" data-value="see">see</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 💪 「會」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="can" data-value="can">can</button><button class="qopt" data-answer="can" data-value="see">see</button><button class="qopt" data-answer="can" data-value="want">want</button><button class="qopt" data-answer="can" data-value="like">like</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 👀 「看見」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="see" data-value="want">want</button><button class="qopt" data-answer="see" data-value="can">can</button><button class="qopt" data-answer="see" data-value="have">have</button><button class="qopt" data-answer="see" data-value="see">see</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🙋 「想要」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="want" data-value="see">see</button><button class="qopt" data-answer="want" data-value="have">have</button><button class="qopt" data-answer="want" data-value="like">like</button><button class="qopt" data-answer="want" data-value="want">want</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(29, this.checked)"> ⭐ Day 29 我完成了</label>
+      </div>
+    </details>
+    <details class="daycard"  data-day="30">
+      <summary><span class="dayno">Day 30</span><span class="ico">🏆</span><span class="daytitle">Final Challenge 最終挑戰</span></summary>
+      <div class="inside">
+        <div class="sectiontitle">① 今天的 5 個單字</div>
+        
+        <div class="wordrow">
+          <div class="emo">🌟</div>
+          <div class="wtext"><b>great</b><span>很棒</span></div>
+          <button class="speak" onclick='speakText("great","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("很棒","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🚀</div>
+          <div class="wtext"><b>ready</b><span>準備好了</span></div>
+          <button class="speak" onclick='speakText("ready","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("準備好了","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">📚</div>
+          <div class="wtext"><b>learn</b><span>學習</span></div>
+          <button class="speak" onclick='speakText("learn","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("學習","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🗣️</div>
+          <div class="wtext"><b>speak</b><span>說</span></div>
+          <button class="speak" onclick='speakText("speak","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("說","zh-TW")'>中</button>
+        </div>
+        <div class="wordrow">
+          <div class="emo">🔤</div>
+          <div class="wtext"><b>English</b><span>英文</span></div>
+          <button class="speak" onclick='speakText("English","en-US")'>🔊</button>
+          <button class="speak zhbtn" onclick='speakText("英文","zh-TW")'>中</button>
+        </div>
+
+        <div class="sectiontitle">② 今天的句型</div>
+        <div class="pattern">
+          <div><b>I can speak English!</b><div class="zhline">我會說英文！</div></div>
+          <div class="patbuttons">
+            <button onclick='speakText("I can speak English!","en-US")'>🔊 英文示範</button>
+            <button onclick='speakText("我會說英文！","zh-TW")'>🔊 中文</button>
+          </div>
+        </div>
+
+        <div class="sectiontitle">③ 今日小短文</div>
+        <div class="reading">
+          <div class="enpass">I am ready to learn. I can speak some English now. I know many words and sentences. Great job! I will keep learning.</div>
+          <div class="zhpass">我準備好繼續學習了。我現在會說一些英文。我認識很多單字和句子。做得很棒！我會繼續學習。</div>
+          <div class="patbuttons">
+            <button onclick='speakText("I am ready to learn. I can speak some English now. I know many words and sentences. Great job! I will keep learning.","en-US")'>🔊 聽整段英文</button>
+            <button onclick='speakText("我準備好繼續學習了。我現在會說一些英文。我認識很多單字和句子。做得很棒！我會繼續學習。","zh-TW")'>🔊 聽中文</button>
+          </div>
+          <div class="readtip">小技巧：先聽一次，再一句一句跟著念；最後再試著整段念完。</div>
+        </div>
+
+        <div class="sectiontitle">④ 跟讀＋錄音</div>
+        <div class="recordbox">
+          <div>可以錄單字、句型，或把上面的整段短文念一次。</div>
+          <button class="recbtn" onclick="startRec(this)">🎙️ 開始錄音</button>
+          <audio class="playback" controls></audio>
+          <div class="recstatus">錄音只留在這個頁面，不會上傳。</div>
+        </div>
+
+        <div class="sectiontitle">⑤ 今天的單字小測驗</div>
+        <div class="quiz" data-day="30">
+          
+        <div class="qitem">
+          <div class="qtitle">1. 🌟 「很棒」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="great" data-value="ready">ready</button><button class="qopt" data-answer="great" data-value="English">English</button><button class="qopt" data-answer="great" data-value="great">great</button><button class="qopt" data-answer="great" data-value="speak">speak</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">2. 🚀 「準備好了」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="ready" data-value="English">English</button><button class="qopt" data-answer="ready" data-value="ready">ready</button><button class="qopt" data-answer="ready" data-value="great">great</button><button class="qopt" data-answer="ready" data-value="learn">learn</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">3. 📚 「學習」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="learn" data-value="speak">speak</button><button class="qopt" data-answer="learn" data-value="great">great</button><button class="qopt" data-answer="learn" data-value="English">English</button><button class="qopt" data-answer="learn" data-value="learn">learn</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">4. 🗣️ 「說」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="speak" data-value="great">great</button><button class="qopt" data-answer="speak" data-value="learn">learn</button><button class="qopt" data-answer="speak" data-value="speak">speak</button><button class="qopt" data-answer="speak" data-value="ready">ready</button></div>
+          <div class="qfeedback"></div>
+        </div>
+        <div class="qitem">
+          <div class="qtitle">5. 🔤 「英文」是哪一個英文？</div>
+          <div class="qopts"><button class="qopt" data-answer="English" data-value="English">English</button><button class="qopt" data-answer="English" data-value="ready">ready</button><button class="qopt" data-answer="English" data-value="learn">learn</button><button class="qopt" data-answer="English" data-value="great">great</button></div>
+          <div class="qfeedback"></div>
+        </div>
+          <div class="quizscore">完成 5 題後會顯示今天的成績。</div>
+        </div>
+
+        <label class="donecheck"><input type="checkbox" onchange="saveDone(30, this.checked)"> ⭐ Day 30 我完成了</label>
+      </div>
+    </details>
+  <div class="footer">建議使用 Safari 或 Chrome 開啟。若錄音沒有反應，請到瀏覽器網站設定確認麥克風權限已允許。完成紀錄會儲存在目前瀏覽器中。</div>
+</div>
+<script>
+function speakText(t,lang){
+  if(!window.speechSynthesis){alert("目前預覽模式不支援語音播放。");return;}
+  speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(t); u.lang=lang; u.rate=lang.startsWith("en")?.75:.9; speechSynthesis.speak(u);
+}
+let currentRecorder=null,currentStream=null,chunks=[];
+async function startRec(btn){
+  const box=btn.closest(".recordbox"),audio=box.querySelector(".playback"),status=box.querySelector(".recstatus");
+  if(currentRecorder&&currentRecorder.state==="recording"){currentRecorder.stop();btn.textContent="🎙️ 再錄一次";return;}
+  if(!window.isSecureContext){status.textContent="⚠️ 錄音需要 HTTPS 安全連線。";return;} if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){status.textContent="⚠️ 這個瀏覽器目前無法使用麥克風。";return;}
+  try{
+    currentStream=await navigator.mediaDevices.getUserMedia({audio:true});chunks=[];
+    currentRecorder=new MediaRecorder(currentStream);
+    currentRecorder.ondataavailable=e=>chunks.push(e.data);
+    currentRecorder.onstop=()=>{const blob=new Blob(chunks,{type:currentRecorder.mimeType||"audio/webm"});audio.src=URL.createObjectURL(blob);audio.style.display="block";status.textContent="✅ 錄好了，可以播放自己的聲音。";currentStream.getTracks().forEach(t=>t.stop());};
+    currentRecorder.start();btn.textContent="⏹️ 停止錄音";status.textContent="🎙️ 正在錄音…";
+  }catch(e){status.textContent="⚠️ 無法開啟麥克風，請確認已允許此網站使用麥克風。";}
+}
+function saveDone(day,val){try{localStorage.setItem("wayne_day_"+day,val?"1":"0");}catch(e){}}
+document.querySelectorAll(".donecheck input").forEach((cb,i)=>{try{cb.checked=localStorage.getItem("wayne_day_"+(i+1))==="1";}catch(e){}});
+
+document.querySelectorAll(".quiz").forEach(quiz=>{
+  const questions=[...quiz.querySelectorAll(".qitem")];
+  questions.forEach(q=>{
+    q.querySelectorAll(".qopt").forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        if(q.dataset.answered==="1")return;
+        q.dataset.answered="1";
+        const correct=btn.dataset.value===btn.dataset.answer;
+        btn.classList.add(correct?"correct":"wrong");
+        if(!correct){[...q.querySelectorAll(".qopt")].find(b=>b.dataset.value===b.dataset.answer)?.classList.add("correct");}
+        q.querySelector(".qfeedback").textContent=correct?"✅ 答對了！ Great job!":"💡 再看一次，綠色的是正確答案。";
+        q.dataset.correct=correct?"1":"0";
+        const answered=questions.filter(x=>x.dataset.answered==="1").length;
+        if(answered===questions.length){
+          const score=questions.filter(x=>x.dataset.correct==="1").length;
+          quiz.querySelector(".quizscore").textContent=`🏆 今天答對 ${score} / ${questions.length} 題`;
+        }
+      });
+    });
+  });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  if (!window.isSecureContext) {
+    const box = document.querySelector(".notice");
+    if (box) {
+      box.innerHTML += '<br><b>⚠️ 目前不是安全連線。</b> 錄音需要 HTTPS 才能正常使用。';
+    }
+  }
+});
+</script>
+
+</body></html>
